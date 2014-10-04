@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="row clearfix">
+    
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @kristine_toy.name %>
-</p>
 
-<p>
-  <strong>Toy type:</strong>
-  <%= @kristine_toy.toy_type %>
-</p>
+      <h1>Name: <%= @kristine_toy.name %></h1>
 
-<p>
-  <strong>Date last played with:</strong>
-  <%= @kristine_toy.date_last_played_with %>
-</p>
+    <p>
+      <strong>Toy type:</strong>
+      <%= @kristine_toy.toy_type %>
+    </p>
 
-<p>
-  <strong>Favorite:</strong>
-  <%= @kristine_toy.favorite %>
-</p>
+    <p>
+      <strong>Date last played with:</strong>
+      <%= @kristine_toy.date_last_played_with %>
+    </p>
 
-<%= link_to 'Edit', edit_kristine_toy_path(@kristine_toy) %> |
-<%= link_to 'Back', kristine_toys_path %>
+    <p>
+      <strong>Favorite:</strong>
+      <%= @kristine_toy.favorite %>
+    </p>
+
+    <%= link_to 'Edit', edit_kristine_toy_path(@kristine_toy) %> |
+    <%= link_to 'Back', kristine_toys_path %>
+
+  </div>
+</div>
