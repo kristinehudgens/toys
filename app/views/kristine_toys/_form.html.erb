@@ -1,0 +1,38 @@
+
+    
+    <%= form_for(@kristine_toy) do |f| %>
+      <% if @kristine_toy.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@kristine_toy.errors.count, "error") %> prohibited this kristine_toy from being saved:</h2>
+
+          <ul>
+          <% @kristine_toy.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field well">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field well">
+        <%= f.label :toy_type %><br>
+        <%= f.text_field :toy_type %>
+      </div>
+      <div class="field well">
+        <%= f.label :date_last_played_with %><br>
+        <%= f.date_select :date_last_played_with %>
+      </div>
+      <div class="control-group well">
+        <%= f.label "Favorite scale", class: 'control-label' %>
+        <div class="controls">
+          <%= f.select(:favorite, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]]), { include_blank: true }) %>
+        </div>
+      </div>
+      <div class="actions well">
+        <%= f.submit "Submit", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+

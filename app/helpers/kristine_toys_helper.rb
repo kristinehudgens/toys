@@ -1,0 +1,2 @@
+module KristineToysHelper
+end

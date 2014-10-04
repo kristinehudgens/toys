@@ -1,0 +1,40 @@
+
+
+<div class="container">
+	<div class="row clearfix">
+    <h1>Here are all of Kristine's toys</h1>
+		<div class="col-md-6 column">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Name</th>
+            <th>Toy type</th>
+            <th>Date last played with</th>
+            <th>Favorite</th>
+            <th colspan="3"></th>
+					</tr>
+				</thead>
+				<tbody>
+          <% @kristine_toys.each do |kristine_toy| %>
+            <tr>
+              <td><%= kristine_toy.name %></td>
+              <td><%= kristine_toy.toy_type %></td>
+              <td><%= kristine_toy.date_last_played_with %></td>
+              <td><%= kristine_toy.favorite %></td>
+              <td><%= link_to 'Show', kristine_toy %></td>
+              <td><%= link_to 'Edit', edit_kristine_toy_path(kristine_toy) %></td>
+              <td><%= link_to 'Destroy', kristine_toy, method: :delete, data: { confirm: 'Are you sure?' } %></td>				
+            </tr>
+          <% end %>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6 column">
+			<h3>
+				Would you like to add a new toy?
+			</h3> <%= link_to 'New Kristine toy', new_kristine_toy_path, class: 'btn btn-info' %>
+		</div>
+	</div>
+</div>
+
+
