@@ -18,8 +18,8 @@
         <%= f.text_field :name %>
       </div>
       <div class="field well">
-        <%= f.label :toy_type %><br>
-        <%= f.text_field :toy_type %>
+        <%= f.label :category_id %><br>
+        <%= collection_select( :kristine_toy, :category_id, Category.all, :id, :name, {}, { :multiple => false }) %>
       </div>
       <div class="field well">
         <%= f.label :date_last_played_with %><br>

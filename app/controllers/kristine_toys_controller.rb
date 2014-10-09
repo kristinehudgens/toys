@@ -69,6 +69,6 @@ class KristineToysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def kristine_toy_params
-      params.require(:kristine_toy).permit(:name, :toy_type, :date_last_played_with, :favorite)
+      params.require(:kristine_toy).permit(:name, :category_id, :date_last_played_with, :favorite)
     end
 end

@@ -11,15 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141004213800) do
+ActiveRecord::Schema.define(version: 20141009215014) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "kristine_toys", force: true do |t|
     t.string   "name"
-    t.string   "toy_type"
     t.date     "date_last_played_with"
     t.integer  "favorite"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
   end
+
+  add_index "kristine_toys", ["category_id"], name: "index_kristine_toys_on_category_id"
 
 end

@@ -18,7 +18,7 @@
           <% @kristine_toys.each do |kristine_toy| %>
             <tr>
               <td><%= kristine_toy.name %></td>
-              <td><%= kristine_toy.toy_type %></td>
+              <td><%= kristine_toy.category.name %></td>
               <td><%= kristine_toy.date_last_played_with %></td>
               <td><%= kristine_toy.favorite %></td>
               <td><%= link_to 'Show', kristine_toy %></td>
